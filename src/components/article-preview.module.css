@@ -1,20 +1,34 @@
 .article-list {
-  margin: 0;
+  margin:0;
   padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: var(--space-3xl);
 }
-
+.article-list li{
+  background: #efefef;
+  border-radius: 10px;
+}
 .title {
-  display: inline-block;
+  display: block;
+  text-align: center;
   font-size: var(--text-lg);
   margin-bottom: var(--space-xs);
-  margin-top: var(--space-lg);
+  margin-top: 0;
   border-bottom: 1.5px solid transparent;
+  background: var(--nokacolor);
+  color:var(--white);
 }
-
+.link img{
+  border-radius: 10px 10px 0 0;
+}
+.text{
+  padding: 10px;
+}
+.text p {
+  margin:0;
+}
 .link {
   text-decoration: none;
 }

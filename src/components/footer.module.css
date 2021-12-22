@@ -3,7 +3,7 @@
   font-size: var(--text-sm);
   margin-top: var(--space-2xl);
   padding: var(--space-2xl) 0;
-  text-align: right;
+  text-align: center;
 }
 
 .container a {

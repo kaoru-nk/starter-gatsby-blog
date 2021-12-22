@@ -7,18 +7,16 @@ const Navigation = () => (
   <nav role="navigation" className={styles.container} aria-label="Main">
     <Link to="/" className={styles.logoLink}>
       <span className={styles.logo} />
-      <span className={styles.navigationItem}>Gatsby Starter Contentful</span>
+      <span className={styles.navigationItem}>すど日記</span>
     </Link>
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
-        <Link to="/" activeClassName="active">
-          Home
-        </Link>
+        <Link to={"/"}>Home</Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/blog/" activeClassName="active">
-          Blog
-        </Link>
+        <a href="https://twitter.com/sudosan" target="_blank" rel="noreferrer noopener">
+          Twitter
+        </a>
       </li>
     </ul>
   </nav>
