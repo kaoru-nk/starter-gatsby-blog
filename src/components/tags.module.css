@@ -9,3 +9,6 @@
   line-height: var(--solid);
   padding: var(--space-sm) var(--space-md);
 }
+.tags > .link{
+  border-bottom: none;
+}

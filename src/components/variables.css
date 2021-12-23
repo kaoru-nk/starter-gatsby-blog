@@ -54,9 +54,8 @@
   --primary: #4a90e2;
   --background: var(--white);
   --title : rgba(255,255,255,0.75);
-  --border: var(--black-fade-5);
   --nokacolor : #7a26f5;
-
+  --border: var( --nokacolor);
   /* text */
   /* color */
   --text-color: var(--black);

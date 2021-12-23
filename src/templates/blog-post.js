@@ -16,8 +16,10 @@ class BlogPostTemplate extends React.Component {
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
     const [author] = get(this.props, 'data.allContentfulPerson.nodes')
+    const taglist = get (this.props, 'data.allContentfulTags.nodes')
     const defaultTitle = encodeURIComponent("すど日記");
     let tweetUrl =`https://twitter.com/intent/tweet?text=${post.title}%20-%20${defaultTitle}%0A`;
+    //console.log(post.tag2);
     if (typeof window !== `undefined`) {
       tweetUrl+=window.location.href;
     }
@@ -45,7 +47,7 @@ class BlogPostTemplate extends React.Component {
                   __html: post.body?.childMarkdownRemark?.html,
                 }}
               />
-              <Tags tags={post.tags} />
+              <Tags tags={post.tag2} />
               <ShareButton link={tweetUrl} />
               {(previous || next) && (
                 <nav>
@@ -73,6 +75,7 @@ class BlogPostTemplate extends React.Component {
             image={author.heroImage.gatsbyImageData}
             title={author.name}
             content={author.shortBio.shortBio}
+            tags={taglist}
           />
         </div>
       </Layout>
@@ -108,7 +111,10 @@ export const pageQuery = graphql`
           timeToRead
         }
       }
-      tags
+      tag2 {
+        title
+        id
+      }
       description {
         childMarkdownRemark {
           excerpt
@@ -139,6 +145,12 @@ export const pageQuery = graphql`
             width: 1180
           )
         }
+      }
+    }
+    allContentfulTags {
+      nodes {
+        title
+        id
       }
     }
   }
