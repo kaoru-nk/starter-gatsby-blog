@@ -18,11 +18,8 @@ class BlogPostTemplate extends React.Component {
     const [author] = get(this.props, 'data.allContentfulPerson.nodes')
     const taglist = get (this.props, 'data.allContentfulTags.nodes')
     const defaultTitle = encodeURIComponent("すど日記");
-    let tweetUrl =`https://twitter.com/intent/tweet?text=${post.title}%20-%20${defaultTitle}%0A`;
-    //console.log(post.tag2);
-    if (typeof window !== `undefined`) {
-      tweetUrl+=window.location.href;
-    }
+    let tweetUrl =`https://twitter.com/intent/tweet?text=${post.title}%20-%20${defaultTitle}%0A${this.props.location.href}`;
+
     return (
       <Layout location={this.props.location}>
         <Seo
