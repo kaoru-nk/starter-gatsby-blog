@@ -16,9 +16,10 @@ class BlogPostTemplate extends React.Component {
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
     const [author] = get(this.props, 'data.allContentfulPerson.nodes')
-    const taglist = get (this.props, 'data.allContentfulTags.nodes')
+    const taglist = get(this.props, 'data.allContentfulTags.nodes')
+    const siteurl = get(this.props, 'data.site.siteMetadata.siteURL')
     const defaultTitle = encodeURIComponent("すど日記");
-    let tweetUrl =`https://twitter.com/intent/tweet?text=${post.title}%20-%20${defaultTitle}%0A${this.props.location.href}`;
+    let tweetUrl =`https://twitter.com/intent/tweet?text=${post.title}%20-%20${defaultTitle}%0A${siteurl}${this.props.location.pathname}`;
 
     return (
       <Layout location={this.props.location}>
@@ -148,6 +149,11 @@ export const pageQuery = graphql`
       nodes {
         title
         id
+      }
+    }
+    site {
+      siteMetadata {
+        siteURL
       }
     }
   }

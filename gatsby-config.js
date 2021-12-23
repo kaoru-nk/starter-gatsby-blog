@@ -38,6 +38,7 @@ module.exports = {
   siteMetadata: {
     title: "すど日記",
     description: "sudosanのブログ",
+    siteURL : "https://sudosan.net"
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
