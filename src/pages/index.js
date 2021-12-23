@@ -31,7 +31,10 @@ export const pageQuery = graphql`
         title
         slug
         publishDate(formatString: "MMMM Do, YYYY")
-        tags
+        tag2 {
+          title
+          id
+        }
         heroImage {
           gatsbyImageData(
             layout: FULL_WIDTH
@@ -44,24 +47,6 @@ export const pageQuery = graphql`
           childMarkdownRemark {
             html
           }
-        }
-      }
-    }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
-      nodes {
-        name
-        shortBio {
-          shortBio
-        }
-        title
-        heroImage: image {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 1180
-          )
         }
       }
     }
