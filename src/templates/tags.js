@@ -48,7 +48,7 @@ export const pageQuery = graphql`
       nodes {
         title
         slug
-        publishDate(formatString: "MMMM Do, YYYY")
+        publishDate(formatString: "YYYY/MM/DD")
         tag2 {
           title
           id
