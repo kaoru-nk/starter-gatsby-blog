@@ -11,7 +11,7 @@
 }
 
 .article {
-  display: grid;
+  //display: grid;
   font-size: var(--text-prose);
   gap: var(--space-xl);
   letter-spacing: var(--text-prose-tracking);
@@ -38,7 +38,7 @@
 }
 
 .article p {
-  margin-bottom: 1.5em;
+  margin-bottom: 3.5em;
   margin-top: 0;
 }
 
@@ -62,6 +62,11 @@
   margin-bottom: 0.5em;
 }
 
+
+.article img{
+  max-width: 100%;
+}
+
 .articleNavigation {
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +75,7 @@
   padding: 0;
 }
 .container{
-
+  min-width: 0;
 }
 .index_container{
   padding: 20px;
@@ -80,6 +85,7 @@
   justify-content: center;
   margin-top: 50px;
 }
+
 @media (max-width: 768px) {
   .container_wrapper {
     display: block;

@@ -16,6 +16,7 @@
     "gatsby-plugin-sharp": "^5.5.0",
     "gatsby-plugin-twitter": "^5.13.1",
     "gatsby-remark-embed-youtube": "^0.0.7",
+    "gatsby-remark-images-contentful": "^6.13.1",
     "gatsby-remark-responsive-iframe": "^6.13.1",
     "gatsby-source-contentful": "^8.5.0",
     "gatsby-transformer-remark": "^6.13.1",
