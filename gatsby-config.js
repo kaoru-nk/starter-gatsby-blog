@@ -70,6 +70,14 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: `gatsby-remark-images-contentful`,
+            options: {
+              maxWidth: 590,
+              withWebp: true,
+              linkImagesToOriginal: true,
+            },
+          },
         ],
       },
     },
