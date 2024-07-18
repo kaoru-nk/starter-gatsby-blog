@@ -6,7 +6,7 @@ import * as styles from './footer.module.css'
 const Footer = () => (
   <Container as="footer">
     <div className={styles.container}>
-      Copyright © 2021 すど. All Rights Reserved.
+      Copyright © 2024 すど. All Rights Reserved.
     </div>
   </Container>
 )

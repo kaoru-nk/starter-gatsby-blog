@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
         <Seo
           title={post.title}
           description={post.description.childMarkdownRemark.excerpt}
-          image={post.heroImage.resize.src}
+          image={post.heroImage.url+"?w=1200&h=630"}
         />
         <Hero
           image={post.heroImage?.gatsbyImageData}
@@ -99,9 +99,7 @@ export const pageQuery = graphql`
       rawDate: publishDate
       heroImage {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
-        resize(height: 630, width: 1200) {
-          src
-        }
+        url
       }
       body {
         childMarkdownRemark {
